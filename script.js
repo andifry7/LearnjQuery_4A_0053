@@ -5,7 +5,7 @@ const inputDate = $("#inputDate");
 const btnTambah = $("#btnTambah");
 const daftarTugas = $("#daftarTugas");
 
-btnTambah.addEventListener("click", function () {
+btnTambah.on("click", function () {
   let teksTugas = inputTugas.value.trim();
   let tanggalTugas = inputDate.value;
 
