@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 const inputTugas = $("#inputTugas");
 const inputDate = $("#inputDate");
 const btnTambah = $("#btnTambah");
