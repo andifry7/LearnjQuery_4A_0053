@@ -1,3 +1,4 @@
+import $ from "jquery";
 const inputTugas = document.getElementById("inputTugas");
 const inputDate = document.getElementById("inputDate");
 const btnTambah = document.getElementById("btnTambah");
