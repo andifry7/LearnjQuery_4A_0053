@@ -44,7 +44,7 @@ btnTambah.on("click", function () {
   btnEdit.innerHTML = "Edit";
   btnEdit.classList.add("edit");
 
-  btnEdit.addEventListener("click", function () {
+  btnEdit.on("click", function () {
     let tugasBaru = prompt("Edit tugas:", spanBaru.innerHTML);
 
     if (tugasBaru === null) {
@@ -66,7 +66,7 @@ btnTambah.on("click", function () {
   btnStatus.innerHTML = "Done";
   btnStatus.classList.add("status");
 
-  btnStatus.addEventListener("click", function () {
+  btnStatus.on("click", function () {
     if (statusBaru.innerHTML === "Status: Progress") {
       statusBaru.innerHTML = "Status: Done";
       statusBaru.classList.remove("progress");
@@ -91,7 +91,7 @@ btnTambah.on("click", function () {
   btnHapus.innerHTML = "Hapus";
   btnHapus.classList.add("hapus");
 
-  btnHapus.addEventListener("click", function () {
+  btnHapus.on("click", function () {
     listBaru.remove();
   });
 
