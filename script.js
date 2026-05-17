@@ -105,13 +105,11 @@ btnTambah.on("click", function () {
   daftarTugas.append(listBaru);
 
   // Warna background selang-seling
-  const warnaBaru = document.querySelectorAll("li");
-
-  warnaBaru.forEach((item, index) => {
+  $("li").each(function (index) {
     if (index % 2 === 0) {
-      item.style.backgroundColor = "#f3f4f6";
+      $(this).css("background-color", "#f3f4f6");
     } else {
-      item.style.backgroundColor = "#d1d5db";
+      $(this).css("background-color", "#d1d5db");
     }
   });
 
