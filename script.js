@@ -21,13 +21,13 @@ btnTambah.on("click", function () {
   let infoTugas = $("<div></div>");
 
   let spanBaru = $("<span></span>");
-  spanBaru.innerHTML = teksTugas;
+  spanBaru.html(teksTugas);
 
   let tanggalBaru = $("<small></small>");
-  tanggalBaru.innerHTML = `Tanggal: ${tanggalTugas}`;
+  tanggalBaru.html(`Tanggal: ${tanggalTugas}`);
 
   let statusBaru = $("<p></p>");
-  statusBaru.innerHTML = "Status: Progress";
+  statusBaru.html("Status: Progress");
   statusBaru.classList.add("progress");
 
   infoTugas.appendChild(spanBaru);
@@ -41,11 +41,11 @@ btnTambah.on("click", function () {
 
   // Tombol edit
   let btnEdit = $("<button></button>");
-  btnEdit.innerHTML = "Edit";
+  btnEdit.html("Edit");
   btnEdit.classList.add("edit");
 
   btnEdit.on("click", function () {
-    let tugasBaru = prompt("Edit tugas:", spanBaru.innerHTML);
+    let tugasBaru = prompt("Edit tugas:", spanBaru.html());
 
     if (tugasBaru === null) {
       return;
@@ -58,29 +58,29 @@ btnTambah.on("click", function () {
       return;
     }
 
-    spanBaru.innerHTML = tugasBaru;
+    spanBaru.html(tugasBaru);
   });
 
   // Tombol status
   let btnStatus = $("<button></button>");
-  btnStatus.innerHTML = "Done";
+  btnStatus.html("Done");
   btnStatus.classList.add("status");
 
   btnStatus.on("click", function () {
-    if (statusBaru.innerHTML === "Status: Progress") {
-      statusBaru.innerHTML = "Status: Done";
+    if (statusBaru.html() === "Status: Progress") {
+      statusBaru.html("Status: Done");
       statusBaru.classList.remove("progress");
       statusBaru.classList.add("done");
 
-      btnStatus.innerHTML = "Undo";
+      btnStatus.html("Undo");
       btnStatus.classList.remove("status");
       btnStatus.classList.add("undo");
     } else {
-      statusBaru.innerHTML = "Status: Progress";
+      statusBaru.html("Status: Progress");
       statusBaru.classList.remove("done");
       statusBaru.classList.add("progress");
 
-      btnStatus.innerHTML = "Done";
+      btnStatus.html("Done");
       btnStatus.classList.remove("undo");
       btnStatus.classList.add("status");
     }
@@ -88,7 +88,7 @@ btnTambah.on("click", function () {
 
   // Tombol hapus
   let btnHapus = $("<button></button>");
-  btnHapus.innerHTML = "Hapus";
+  btnHapus.html("Hapus");
   btnHapus.classList.add("hapus");
 
   btnHapus.on("click", function () {
