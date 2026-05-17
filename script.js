@@ -1,8 +1,9 @@
 import $ from "jquery";
-const inputTugas = document.getElementById("inputTugas");
-const inputDate = document.getElementById("inputDate");
-const btnTambah = document.getElementById("btnTambah");
-const daftarTugas = document.getElementById("daftarTugas");
+
+const inputTugas = $("#inputTugas");
+const inputDate = $("#inputDate");
+const btnTambah = $("#btnTambah");
+const daftarTugas = $("#daftarTugas");
 
 btnTambah.addEventListener("click", function () {
   let teksTugas = inputTugas.value.trim();
