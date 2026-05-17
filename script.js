@@ -28,7 +28,7 @@ btnTambah.on("click", function () {
 
   let statusBaru = $("<p></p>");
   statusBaru.html("Status: Progress");
-  statusBaru.classList.add("progress");
+  statusBaru.addClass("progress");
 
   infoTugas.append(spanBaru);
   infoTugas.append($("<br></br>"));
@@ -37,12 +37,12 @@ btnTambah.on("click", function () {
 
   // Container tombol
   let aksi = $("<div></div>");
-  aksi.classList.add("aksi");
+  aksi.addClass("aksi");
 
   // Tombol edit
   let btnEdit = $("<button></button>");
   btnEdit.html("Edit");
-  btnEdit.classList.add("edit");
+  btnEdit.addClass("edit");
 
   btnEdit.on("click", function () {
     let tugasBaru = prompt("Edit tugas:", spanBaru.html());
@@ -64,32 +64,32 @@ btnTambah.on("click", function () {
   // Tombol status
   let btnStatus = $("<button></button>");
   btnStatus.html("Done");
-  btnStatus.classList.add("status");
+  btnStatus.addClass("status");
 
   btnStatus.on("click", function () {
     if (statusBaru.html() === "Status: Progress") {
       statusBaru.html("Status: Done");
-      statusBaru.classList.remove("progress");
-      statusBaru.classList.add("done");
+      statusBaru.removeClass("progress");
+      statusBaru.addClass("done");
 
       btnStatus.html("Undo");
-      btnStatus.classList.remove("status");
-      btnStatus.classList.add("undo");
+      btnStatus.removeClass("status");
+      btnStatus.addClass("undo");
     } else {
       statusBaru.html("Status: Progress");
-      statusBaru.classList.remove("done");
-      statusBaru.classList.add("progress");
+      statusBaru.removeClass("done");
+      statusBaru.addClass("progress");
 
       btnStatus.html("Done");
-      btnStatus.classList.remove("undo");
-      btnStatus.classList.add("status");
+      btnStatus.removeClass("undo");
+      btnStatus.addClass("status");
     }
   });
 
   // Tombol hapus
   let btnHapus = $("<button></button>");
   btnHapus.html("Hapus");
-  btnHapus.classList.add("hapus");
+  btnHapus.addClass("hapus");
 
   btnHapus.on("click", function () {
     listBaru.remove();
