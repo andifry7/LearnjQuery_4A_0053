@@ -15,32 +15,32 @@ btnTambah.on("click", function () {
   }
 
   // Membuat elemen list
-  let listBaru = document.createElement("li");
+  let listBaru = $("<li></li>");
 
   // Container isi tugas
-  let infoTugas = document.createElement("div");
+  let infoTugas = $("<div></div>");
 
-  let spanBaru = document.createElement("span");
+  let spanBaru = $("<span></span>");
   spanBaru.innerHTML = teksTugas;
 
-  let tanggalBaru = document.createElement("small");
+  let tanggalBaru = $("<small></small>");
   tanggalBaru.innerHTML = `Tanggal: ${tanggalTugas}`;
 
-  let statusBaru = document.createElement("p");
+  let statusBaru = $("<p></p>");
   statusBaru.innerHTML = "Status: Progress";
   statusBaru.classList.add("progress");
 
   infoTugas.appendChild(spanBaru);
-  infoTugas.appendChild(document.createElement("br"));
+  infoTugas.appendChild($("<br></br>"));
   infoTugas.appendChild(tanggalBaru);
   infoTugas.appendChild(statusBaru);
 
   // Container tombol
-  let aksi = document.createElement("div");
+  let aksi = $("<div></div>");
   aksi.classList.add("aksi");
 
   // Tombol edit
-  let btnEdit = document.createElement("button");
+  let btnEdit = $("<button></button>");
   btnEdit.innerHTML = "Edit";
   btnEdit.classList.add("edit");
 
@@ -62,7 +62,7 @@ btnTambah.on("click", function () {
   });
 
   // Tombol status
-  let btnStatus = document.createElement("button");
+  let btnStatus = $("<button></button>");
   btnStatus.innerHTML = "Done";
   btnStatus.classList.add("status");
 
@@ -87,7 +87,7 @@ btnTambah.on("click", function () {
   });
 
   // Tombol hapus
-  let btnHapus = document.createElement("button");
+  let btnHapus = $("<button></button>");
   btnHapus.innerHTML = "Hapus";
   btnHapus.classList.add("hapus");
 
