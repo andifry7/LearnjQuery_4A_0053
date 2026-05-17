@@ -6,8 +6,8 @@ const btnTambah = $("#btnTambah");
 const daftarTugas = $("#daftarTugas");
 
 btnTambah.on("click", function () {
-  let teksTugas = inputTugas.value.trim();
-  let tanggalTugas = inputDate.value;
+  let teksTugas = inputTugas.val().trim();
+  let tanggalTugas = inputDate.val();
 
   if (teksTugas === "" || tanggalTugas === "") {
     alert("Data dan tanggal harus diisi!");
@@ -116,6 +116,6 @@ btnTambah.on("click", function () {
   });
 
   // Reset input
-  inputTugas.value = "";
-  inputDate.value = "";
+  inputTugas.val("");
+  inputDate.val("");
 });
