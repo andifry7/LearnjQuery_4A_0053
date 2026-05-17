@@ -30,10 +30,10 @@ btnTambah.on("click", function () {
   statusBaru.html("Status: Progress");
   statusBaru.classList.add("progress");
 
-  infoTugas.appendChild(spanBaru);
-  infoTugas.appendChild($("<br></br>"));
-  infoTugas.appendChild(tanggalBaru);
-  infoTugas.appendChild(statusBaru);
+  infoTugas.append(spanBaru);
+  infoTugas.append($("<br></br>"));
+  infoTugas.append(tanggalBaru);
+  infoTugas.append(statusBaru);
 
   // Container tombol
   let aksi = $("<div></div>");
@@ -95,14 +95,14 @@ btnTambah.on("click", function () {
     listBaru.remove();
   });
 
-  aksi.appendChild(btnEdit);
-  aksi.appendChild(btnStatus);
-  aksi.appendChild(btnHapus);
+  aksi.append(btnEdit);
+  aksi.append(btnStatus);
+  aksi.append(btnHapus);
 
-  listBaru.appendChild(infoTugas);
-  listBaru.appendChild(aksi);
+  listBaru.append(infoTugas);
+  listBaru.append(aksi);
 
-  daftarTugas.appendChild(listBaru);
+  daftarTugas.append(listBaru);
 
   // Warna background selang-seling
   const warnaBaru = document.querySelectorAll("li");
