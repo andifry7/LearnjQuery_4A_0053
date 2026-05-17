@@ -1,7 +1,7 @@
 ### Tampilan Awal
 
-![Preview](asset/tampilanAwal.png)
+![Preview](assets/tampilanAwal.png)
 
 ### Tampilan Sesudah Input Data
 
-![Preview](asset/tampilanSesudahInputData.png)
+![Preview](assets/tampilanSesudahInputData.png)
